@@ -5,7 +5,7 @@ const section = document.querySelector("section");
 
 async function populate() {
 
-    const url = "https://priyansht.github.io/25W-JavaScript-LH-Week11/js/i-scream.json";
+    const url = "https://aiden-halliday.github.io/js-lab04/js/i-scream.json";
     const request = new Request(url);
     const response = await fetch(request);
     const responseJson = await response.json();
