@@ -3,7 +3,7 @@ const header = document.querySelector("header");
 const section = document.querySelector("section");
 
 
-async function populate() {
+async function populate() { // populates the page with data
 
     const url = "https://aiden-halliday.github.io/js-lab04/js/i-scream.json";
     const request = new Request(url);
@@ -16,7 +16,7 @@ async function populate() {
 
 populate();
 
-function populateHeader(jsonBody) {
+function populateHeader(jsonBody) { //creates the header of the page
     let h1 = document.createElement("h1"); 
     let p = document.createElement("p");
     h1.textContent = jsonBody.companyName;
@@ -25,7 +25,7 @@ function populateHeader(jsonBody) {
     header.appendChild(h1);
     header.appendChild(p);
 }
-function showTopFlavors(jsonBody) {
+function showTopFlavors(jsonBody) { //creates each flavour article section
     let topFlavors = jsonBody.topFlavours;
     for (let i = 0; i < topFlavors.length; i++) {
         console.log(topFlavors[i]);
@@ -43,11 +43,12 @@ function showTopFlavors(jsonBody) {
         let ingredients = topFlavors[i].ingredients;
         for (let j = 0; j < ingredients.length; j++) {
             console.log(ingredients[j]);
-            let listItem = document.createElement("li"); // <li></li>
+            let listItem = document.createElement("li");
             listItem.textContent = ingredients[j];
             list.appendChild(listItem);
         }
 
+        //appends all elements to each article
         article.appendChild(h2);
         article.appendChild(p1);
         article.appendChild(p2);

@@ -31,7 +31,7 @@
     },
     {
         "name": "Vanilla Chocolate Chip",
-        "calories": 200,
+        "calories": 250,
         "type": "ice-cream",
         "ingredients": ["Vanilla Base", "Chocolate Chips", "Chocolate Syrup"],
         "image": "https://aiden-halliday.github.io/js-lab04/images/ice-cream-xtra2.svg"
